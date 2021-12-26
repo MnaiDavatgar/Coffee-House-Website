@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mani Davatgar">
+    <title>Coffee House about page</title>
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../CSS/about.css">
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div id="menu-container" class="nav-item">
+                <ul class="menu list">
+                    <li class="menu-item" id="Menu">
+                        Menu<i class="uil uil-angle-up"></i>
+                    </li>
+                    <li class="menu-item" id="Products">
+                        Events<i class="uil uil-angle-up"></i>
+                    </li>
+                    <li class="menu-item" id="Company">
+                        About & contact us<i class="uil uil-angle-up"></i>
+                    </li>
+                </ul>
+                <div class="drop-menu" id="Menu-list">
+                    <ul id="Menu-drop-down">
+                        <li id="first-drop-item" class="drop-item">Coffee</li>
+                        <li id="second-drop-item" class="drop-item">Bakery</li>
+                        <li id="third-drop-item" class="drop-item">Break Fast</li>
+                        <li id="fourth-drop-item" class="drop-item">Delivery</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="logo-container" class="nav-item">
+                <a href="../HTML/Coffee House.html">
+                    <img src="../../figma/Logo.svg" alt="Cafe logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="about-us" class="section">
+            <h1><strong>about</strong>us</h1>
+            <div id="about-us-container">
+                <div id="about-us-image-container" class="about-us-item"></div>
+                <div id="about-us-text-container" class="about-us-item">
+                    <h1>what makes us special</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aperiam ea, dolorum nesciunt dolores 
+                       omnis in illo nobis! Exercitationem dicta tenetur, consequatur provident, eius nam, delectus quaerat consequuntur
+                       distinctio modi cumque. Architecto modi excepturi sequi et, laborum corporis pariatur nostrum cumque reprehenderit.
+                       Dolores eius, laborum suscipit delectus vel provident quod.</p>
+                       <button type="button" id="button" onclick="homeButton()">Home Page</button>
+                </div>
+            </div>
+        </section>
+        <section id="customers-review" class="section">
+            <div id="customers-review-header-container">
+            <h1><strong>customers</strong>review</h1>
+            </div>
+            <div id="customers-review-container">
+                <div class="customers-review-item">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                       Consequatur aliquam aspernatur dignissimos.
+                       Sapiente aut voluptatem alias! At rem similique iure.</p>
+                       <div id="first-customer-image" class="customer-image"></div>
+                       <span>John Doe</span>
+                       <div class="star-container">
+                        <i class="uil uil-star yellow-star"></i>
+                        <i class="uil uil-star yellow-star"></i>
+                        <i class="uil uil-star yellow-star"></i>
+                        <i class="uil uil-star yellow-star"></i>
+                        <i class="uil uil-star"></i>
+                       </div>
+                </div>
+                <div class="customers-review-item">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Consequatur aliquam aspernatur dignissimos.
+                        Sapiente aut voluptatem alias! At rem similique iure.</p>
+                        <div id="second-customer-image" class="customer-image"></div>
+                        <span>John Doe</span>
+                        <div class="star-container">
+                         <i class="uil uil-star yellow-star"></i>
+                         <i class="uil uil-star yellow-star"></i>
+                         <i class="uil uil-star yellow-star"></i>
+                         <i class="uil uil-star"></i>
+                         <i class="uil uil-star"></i>
+                        </div>
+                </div>
+                <div class="customers-review-item">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Consequatur aliquam aspernatur dignissimos.
+                        Sapiente aut voluptatem alias! At rem similique iure.</p>
+                        <div id="third-customer-image" class="customer-image"></div>
+                        <span>John Doe</span>
+                        <div class="star-container">
+                         <i class="uil uil-star yellow-star"></i>
+                         <i class="uil uil-star yellow-star"></i>
+                         <i class="uil uil-star yellow-star"></i>
+                         <i class="uil uil-star yellow-star"></i>
+                         <i class="uil uil-star yellow-star"></i>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-part" class="section">
+            <div id="map-container" class="contact-part-item">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d143329.3491154863!2d49.495149589998434!3d37.45691842122176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1639520938971!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div id="form-container" class="contact-part-item">
+                <form>
+                    <label for="name-input"></label>Name:<br>
+                    <input type="text" name="Name" id="name-input">
+                    <label for="email-input">E-mail:</label><br>
+                    <input type="email" name="E-mail" id="email-input">
+                    <label for="textArea">Write your opinion here please:</label><br>
+                    <textarea name="opinion" id="textArea"></textarea>
+                    <input type="submit" id="submit-butotn">
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <!-- History -->
+        <div id="history-part" class="section">
+            <div id="history-text" class="history-item">
+                <h1>history</h1>
+                <p>Lorem ipsum dolor, 
+                    sit amet consectetur adipisicing elit. A debitis dicta nisi 
+                    nostrum quisquam veritatis tempora iusto voluptatem modi quibusdam?</p>
+                <span id="history-sign">Mani Davatgar</span>
+            </div>
+            <div id="history-picture" class="history-item">
+                <img src="../Pictures/bar.jpg" alt="Cafe bar">
+            </div>
+        </div>
+        <!-- Contacts -->
+        <div id="contacts-part">
+            <div id="contacts-container">
+                <div class="contacts-item">
+                    <img src="../../figma/Telephone.svg" alt="Telephone">Phone Number:<br>+989902708576
+                </div>
+                    <div class="contacts-item">
+                        <img src="../../figma/Compass.svg" alt="Compass">Location:<br>
+                    Iran, Guilan province, Bandar-e-Anzali</div>
+                   <div class="contacts-item">
+                        <a href="#">
+                            <i class="uil uil-github-alt github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="uil uil-whatsapp whatsapp"></i>
+                        </a>
+                        <a href="#">
+                            <i class="uil uil-linkedin-alt linkedin"></i>
+                        </a>
+                    </div>
+            </div>
+        </div>
+        <p id="E-mail">www.manidavatgar@gmail.com</p>
+        <p id="copyright">
+            &copy;Copyright2021example.am
+        </p>
+    </footer>
+    <script src="../JavaScript/about.js"></script>
+</body>
+</html>

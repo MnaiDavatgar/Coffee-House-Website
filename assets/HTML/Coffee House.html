@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mani Davatgar">
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../CSS/Coffee House.css">
+    <!-- Splide Css(A library for making image slideshows) -->
+    <link rel="stylesheet" href="../../splide/dist/css/splide.min.css">
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Coffee House</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div id="menu-container" class="nav-item">
+                <ul class="menu list">
+                    <li class="menu-item" id="Menu">
+                        Menu<i class="uil uil-angle-up"></i>
+                    </li>
+                    <li class="menu-item" id="Products">
+                        Events<i class="uil uil-angle-up"></i>
+                    </li>
+                    <li class="menu-item" id="Company">
+                        About & contact us<i class="uil uil-angle-up"></i>
+                    </li>
+                </ul>
+                <div class="drop-menu" id="Menu-list">
+                    <ul id="Menu-drop-down">
+                        <li id="first-drop-item" class="drop-item">Coffee</li>
+                        <li id="second-drop-item" class="drop-item">Cake</li>
+                        <li id="third-drop-item" class="drop-item">Delivery</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="logo-container" class="nav-item">
+                <a href="../HTML/Coffee House.html">
+                    <img src="../../figma/Logo.svg" alt="Cafe logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Home -->
+        <section id="home-section" class="section">
+            <div id="home-picture" class="home-item"></div>
+            <div id="home-text-container" class="home-item">
+                <div id="home-text">
+                <span class="box" id="fAnimation">Coffee House</span>
+                <h1 class="box">Coffee wakes us up</h1>
+                </div>
+            </div>
+        </section>
+        <!-- SVG Menu -->
+        <section id="menu-section" class="section">
+            <div id="svg-menu-container">
+                <ul class="svg-menu">
+                    <li id="svg-menu-item">
+                        <a href="#">
+                            <img src="../../figma/Coffee.svg" alt="Coffee Icon"><br>Coffee
+                        </a>
+                    </li>
+                    <li id="svg-menu-item">
+                        <a href="#">
+                            <img src="../../figma/Cup Cake.svg" alt="Cake Icon"><br>Bakery
+                        </a>
+                    </li>
+                </ul>
+                <ul class="svg-menu">
+                    <li id="svg-menu-item">
+                        <a href="#">
+                            <img src="../../figma/Egg.svg" alt="Break Fast Icon"><br>Break Fast
+                        </a>
+                    </li>
+                    <li id="svg-menu-item">
+                        <a href="#">
+                            <img src="../../figma/Delivery.svg" alt="Delivery Icon"><br>Delivery
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- First Part -->
+        <section id="first-part" class="section">
+            <div id="first-part-container">
+                <img src="../Pictures/Chemex.jpg" alt="Chemex" class="first-part-item">
+            </div>
+            <div id="first-part-black" class="first-part-item">
+                <div id="first-part-text-container">
+                    <span id="firstNeon">Coffee House</span>
+                    <h1>Best days start with a cup of coffee.</h1>
+                </div>
+            </div>
+        </section>
+        <!-- Second Part -->
+        <section id="second-part" class="section">
+            <div id="second-part-container">
+                <img src="../Pictures/Aero press.jpg" alt="Aero press">
+            </div>
+            <div id="second-part-text-container">
+                <span id="secondNeon">New Event</span>
+                <h1 id="secondText">turn up the heat on your next event.</h1>
+                <p id="thirdText">Lorem ipsum dolor, sit amet consectetur adipisicing elit Culpa optio 
+                    aperiam sit praesentium inventore delectus facilis!
+                    Odit velit fuga aperiam.</p>
+                <a href="../HTML/events.html" id="second-part-link">
+                    See More<i class="uil uil-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+        <!-- Gallery -->
+        <section id="gallery-part" class="section">
+        <h1 id="gallery-header">Gallery</h1>
+        <!-- Splide structure for slider -->
+        <div class="splide splide-containers">
+            <div class="splide__track splide-containers">
+                <ul class="splide__list splide-containers">
+                    <li class="splide__slide">
+                        <img src="../Pictures/Red Velvet.jpg" alt="Red velvet">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="../Pictures/Espresso Machine.jpg" alt="espresso machine">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="../Pictures/Break Fast.jpg" alt="Break fast" id="break-fast-picture">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="../Pictures/S Cold Brew.jpg" alt="Cold brew">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="../Pictures/Cookies.jpg" alt="Cookies" id="cookies-picture">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="../Pictures/Pour Over.jpg" alt="Pour over">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </section>
+        <!-- Third Part -->
+        <section id="third-part" class="section">
+            <div id="third-part-black" class="third-part-item">
+                <div id="third-part-text-container">
+                    <span id="thirdNeon">Choose it carefully!</span>
+                    <h1>The beans aroma keeps more people awake than caffeine</h1>
+                </div>
+            </div>
+            <div id="third-part-container">
+                <img src="../Pictures/V60.jpg" alt="V60" class="third-part-item">
+            </div>
+            <h1 id="big-c">C</h1>
+        </section>
+        <!-- Fourth Part -->
+        <section id="fourth-part" class="section">
+            <span id="fourthNeon">Event</span>
+            <div id="fourth-part-container">
+                <div id="fourth-part-text-container" class="fourth-part-item">
+                    <div id="fourth-part-text">
+                    <h1 id="fourth-part-heahder">shake it today</h1>
+                    <p id="fourth-part-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Consectetur reprehenderit nemo fuga, magnam impedit modi voluptatem dolor
+                       explicabo aspernatur.</p>
+                       <a href="../HTML/events.html" id="fourth-part-link">
+                           see more<i class="uil uil-arrow-right"></i>
+                       </a>
+                    </div>
+                </div>
+                <div id="fourth-part-image-container" class="fourth-part-item">
+                    <img src="../Pictures/coffee and Cookies.jpg" alt="Coffee with cookie">
+                    <img src="../Pictures/Cold Brew.jpg" alt="Cold brew">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <!-- History -->
+        <div id="history-part" class="section">
+            <div id="history-text" class="history-item">
+                <h1>history</h1>
+                <p>Lorem ipsum dolor, 
+                    sit amet consectetur adipisicing elit. A debitis dicta nisi 
+                    nostrum quisquam veritatis tempora iusto voluptatem modi quibusdam?</p>
+                <span id="history-sign">Mani Davatgar</span>
+            </div>
+            <div id="history-picture" class="history-item">
+                <img src="../Pictures/bar.jpg" alt="Cafe bar">
+            </div>
+        </div>
+        <!-- Contacts -->
+        <div id="contacts-part">
+            <div id="contacts-container">
+                <div class="contacts-item">
+                    <img src="../../figma/Telephone.svg" alt="Telephone">Phone Number:<br>+989902708576
+                </div>
+                    <div class="contacts-item">
+                        <img src="../../figma/Compass.svg" alt="Compass">Location:<br>
+                    Iran, Guilan province, Bandar-e-Anzali</div>
+                   <div class="contacts-item">
+                        <a href="#">
+                            <i class="uil uil-github-alt github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="uil uil-whatsapp whatsapp"></i>
+                        </a>
+                        <a href="#">
+                            <i class="uil uil-linkedin-alt linkedin"></i>
+                        </a>
+                    </div>
+            </div>
+        </div>
+        <p id="E-mail">www.manidavatgar@gmail.com</p>
+        <p id="copyright">
+            &copy;Copyright2021example.am
+        </p>
+    </footer>
+    <!-- Main JavaScript -->
+    <script src="../JavaScript/Coffee House.js"></script>
+    <!-- Splide JavaScript(A library for making image slideshows) -->
+    <script src="../../splide/dist/js/splide.min.js"></script>
+    <script>
+        new Splide( '.splide', {
+            type:"loop",
+            perPage:2,
+            autoplay:true,
+        }).mount();
+      </script>
+</body>
+</html>

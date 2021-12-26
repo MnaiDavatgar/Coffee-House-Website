@@ -1,0 +1,584 @@
+/* ==================== Google fonts ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans+Condensed:wght@300&family=Shippori+Antique&display=swap');
+/* ================== Css Variables ===================== */
+:root{
+    /* =============== Colors ================ */
+    --neon-light: hsl(0, 100%, 50%);
+    --neon-lump: hsl(0, 74%, 71%);
+    --background: hsl(0, 100%, 3%);
+    --text: #fff;
+    --text-hover-color: hsl(0, 0%, 49%);
+    --drop-down-menu: hsl(0, 100%, 14%);
+    --strong-text-color: hsl(40, 99%, 34%);
+    --section-background: hsl(0, 0%, 8%);
+    /*==================== Font Families ================== */
+    --neon-lump-font-family: 'Comforter Brush', cursive;
+    --sign: 'Great Vibes', cursive;
+    --header-font-family: 'Open Sans Condensed', sans-serif;
+    --text-font-family: 'Shippori Antique', sans-serif;
+    /* ====================== Font Sizes ======================= */
+    --neon-lump-font-size: 1.8rem;
+    --header-font-size: 3rem;
+    --text-font-size: .8rem;
+    --menu-font-size: 1rem;
+    /* ====================== Font weights ===================== */
+    --thin: 400;
+    --semi-bold: 700;
+    --bold: 900;
+    /* ======================== Z-indexes ====================== */
+    --fixed-z-index: 100;
+    --absolute-z-index: 10;
+    /* ===================== Margin Bottom ====================== */
+    --m-b-1-5: 1.5rem;
+    /* ===================== Iframe Width ====================== */
+    --i-frame-width: 100%; 
+}
+    /* ==================== Responsive Variables ================== */
+    @media screen and (min-width: 600px) {
+    :root{
+        /* ================ Typography =============== */
+        --neon-limp-font-size: 2.6rem;
+        --header-font-size: 3.5rem;
+        --text-font-size: 1rem; 
+        --menu-font-size: 1.5rem;
+        /* ================ Iframe Width =============== */
+        --i-frame-width: 50%; 
+    }
+}
+@media screen and (min-width: 1840px) {
+    :root{
+        /* ================ Typography =============== */
+        --neon-limp-font-size: 4.6rem;
+        --header-font-size: 5.5rem;
+        --text-font-size: 2.5rem;
+        --menu-font-size: 2.5rem;   
+        /* ================ Margin Bottom =============== */
+        --m-b-1-5: 5.5rem;
+    }
+}
+/* ========================= Basics ========================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+    font-size: var(--text-font-size);
+    font-family: var(--text-font-family);
+    color: var(--text);
+    min-height: 100vh;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1{
+    display: inline-block;
+    font-size: var(--header-font-size);
+    font-family: var(--header-font-family);
+}
+p{
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    list-style: none;
+}
+li{
+    text-transform: uppercase;
+}
+strong{
+    color: var(--strong-text-color);
+    margin-right: 1rem;
+}
+/* ====================== Reusable Classes ====================== */
+.section{
+    margin-bottom: var(--m-b-1-5);
+    width: 100%;
+    height: auto;
+}
+/* ===================== Navigation Bar ==================== */
+header{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--fixed-z-index);
+    border-bottom: 1px solid #fff;
+}
+nav{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+}
+#menu-container{
+    width: 60%;
+    height: auto;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    position: relative;
+}
+.list{
+    border-top: none;
+    border-bottom: none;
+}
+.menu-item{
+    cursor: pointer;
+    float: left;
+    font-size: var(--menu-font-size);
+}
+.menu-item:hover{
+    color: var(--text-hover-color);
+}
+.drop-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--absolute-z-index);
+    background-color: var(--drop-down-menu);
+    width: 60%;
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+#Menu-drop-down{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+#Menu-drop-down li{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    margin-bottom: 40px;
+    border-bottom: 1px solid #fff;
+}
+#Menu-drop-down li:nth-child(3){
+    margin-bottom: 25px;
+}
+#Menu-drop-down li:last-child{
+    border-bottom: none;
+}
+.drop-item{
+    cursor: pointer;
+}
+.drop-item:hover{
+    background-color: var(--text-hover-color);
+}
+#logo-container{
+    width: 40%;
+    height: 100px;
+    border-bottom: none;
+    display: flex;
+    justify-content: flex-end;
+}
+#logo-container img{
+    height: 100px;
+}
+/* ================================ Main ================================== */
+main{
+    width: 100%;
+    height: auto;
+    margin-bottom: 6rem;
+    padding: 20rem 3rem 0;
+}
+/* ================================ About us ================================== */
+#about-us-container{
+    height: 800px;
+    border: 1px solid rgb(58, 58, 58);
+}
+#about-us-image-container{
+    background-image: url(../Pictures/french\ coffee.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#about-us-text-container{
+    background-color: var(--section-background);
+}
+#about-us-text-container > *{
+    margin-bottom: 2rem;
+}
+#about-us{
+    text-align: center;
+}
+#about-us h1{
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+.about-us-item{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+}
+#button{
+    width: 100px;
+    height: 50px;
+    color: #fff;
+    font-weight: var(--bold);
+    font-size: var(--text-font-size);
+    background-color: var(--strong-text-color);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border: none;
+    border-radius: .5rem;
+    transition: 1s;
+    cursor: pointer;
+}
+#button:hover{
+    background-color: hsl(40, 99%, 20%);
+    width: 150px;
+    height: 60px;
+}
+/* ============================= customers review =========================== */
+#customers-review{
+    height: 1000px;
+}
+#customers-review-header-container{
+    width: 100%;
+    height: auto;
+}
+#customers-review-container{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#customers-review h1{
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.customers-review-item{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .2rem;
+    background-color: var(--section-background);
+}
+.customers-review-item > *{
+    margin-bottom: 3rem;
+}
+.customers-review-item i{
+    transition: 1s;
+}
+.customers-review-item i:hover{
+    font-size: 3rem;
+}
+.customer-image{
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+.yellow-star{
+    color: #ff0;
+}
+#first-customer-image{
+    background-image: url(../Pictures/customer1.jpeg);
+}
+#second-customer-image{
+    background-image: url(../Pictures/customer2.jpeg);
+}
+#third-customer-image{
+    background-image: url(../Pictures/customer3.jpeg);
+}
+/* =================================== Google map =============================== */
+.contact-part-item{
+    width: 100%;
+    height: 600px;
+}
+#map-container{
+    background-color: transparent;
+}
+#form-container{
+    background-color: var(--section-background);
+}
+/* =================================== Opinion field =============================== */
+#contact-part{
+    height: 600px;
+}
+#form-container{
+    padding: 0 1rem;
+}
+form input{
+    margin-bottom: 2rem;
+}
+form input,
+#textArea{
+    width: 100%;
+    padding: 0.7rem;
+    background-color: rgb(75, 75, 75);
+    border-radius: 10px;
+    color: #fff;
+}
+#textArea{
+    height: 200px;
+    margin-bottom: 3rem;
+    resize: none;
+}
+form input:focus,
+#textArea:focus{
+    box-shadow: inset 0 0 20px var(--neon-light);
+    outline: none;
+}
+#submit-butotn{
+    color: #fff;
+    font-weight: var(--bold);
+    font-family: var(--text-font-family);
+    font-size: var(--menu-font-size);
+}
+/* ============================= Footer =========================== */
+/* =================== History Part ==================== */
+#history-part{
+    position: relative;
+    background-color: rgba(20, 20, 20, 0.8);
+    height: 700px;
+}
+#history-sign{
+    display: block;
+    font-family: var(--sign);
+    font-size: var(--neon-lump-font-family);
+}
+#history-text{
+    text-align: center;
+}
+#history-text h1{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#history-text > *{
+    margin-bottom: 2rem;
+}
+#history-picture img{
+    width: 100%;
+    height: 350px;
+}
+.history-item{
+    width: 100%;
+    height: 350px;
+}
+#history-part::after{
+    content: '';
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background-image: url(../../figma/fundation.svg);
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ========================= Contacts Part ======================== */
+#contacts-part{
+    height: auto;
+    margin-bottom: 2rem;
+}
+#contacts-container{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    height: auto;
+}
+.contacts-item{
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+    font-weight: var(--bold);
+    width: 100%;
+    height: 100px;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.contacts-item:last-child{
+    justify-content: space-around;
+    border-bottom: none;
+}
+.contacts-item i{
+    font-size: 2rem;
+}
+.contacts-item img{
+    width: 50px;
+    height: 50px;
+}
+.github:hover{
+    color: hsl(285, 100%, 31%);
+}
+.whatsapp:hover{
+    color: hsl(120, 100%, 50%);
+}
+.linkedin:hover{
+    color: hsl(210, 100%, 40%);
+}
+#E-mail{
+    width: 100%;   
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+#copyright{
+    text-align: center;
+}
+/*================================== Media Queries ===============================*/
+@media screen and (min-width: 600px) {
+    #about-us-container{
+        height: 1000px;
+    }
+    .about-us-item{
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    #customers-review{
+        height: 600px;
+    }
+    #customers-review-container{
+        flex-direction: row;
+    }
+    .customers-review-item{
+        width: 30%;
+    }
+    .contact-part-item{
+        width: 50%;
+        height: 600px;
+        float: left;
+    }
+    .history-item{
+        float: left;
+        width: 50%;
+    }
+    #history-part{
+        height: 400px;
+    }
+    #history-text{
+        text-align: left;
+        padding-left: 2rem;
+    }
+    #history-picture img{
+        height: 400px;
+    }
+    #contacts-part{
+        padding: 0 5rem;
+    }
+    .contacts-item{
+        float: left;
+        width: 33.33%;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .contacts-item:last-child{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .contacts-item:first-child{
+        border-left: 1px solid rgba(255, 255, 255, 0.8);
+    }
+}
+@media screen and (min-width: 1840px) {
+    header, 
+    nav, 
+    .menu,
+    #logo-container,
+    #logo-container img
+    {
+        height: 200px;
+    }
+    #contact-part{
+        height: 700px;
+    }
+    #customers-review{
+        height: 1000px;
+    }
+    #customers-review-container{
+        height: 900px;
+    }
+    .customers-review-item{
+        height: 750px;
+    }
+    .contact-part-item{
+        height: 710px;
+    }
+    #button{
+        width: 300px;
+        height: 130px;
+    }
+    #button:hover{
+        width: 350px;
+        height: 150px;
+    }
+    #history-part{
+        height: 600px;
+    }
+    #history-picture img{
+        height: 600px;
+    }
+    #history-part::after{
+        width: 200px;
+        height: 200px;
+    }
+    .contacts-item{
+        height: 200px;
+    }
+    .contacts-item img{
+        width: 120px;
+        height: 120px;
+    }
+    .contacts-item i{
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    #menu-container,
+    .drop-menu
+    {
+        width: 100%;
+    }
+    #menu-container{
+        order: 2;
+    }
+    #logo-container{
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        order: 1;
+        justify-content: center;
+    }
+    nav{
+        flex-direction: column;
+    }
+    #customers-review{
+        margin-bottom: 15rem;
+    }
+    #customers-review-container{
+        margin-top: 300px;
+    }
+    #map-container{
+        height: 400px;
+    }
+    #contact-part{
+        margin-bottom: 500px;
+    }
+}

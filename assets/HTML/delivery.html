@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mani Davatgar">
+    <title>Coffee house delivery</title>
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../CSS/delivrey.css">
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div id="menu-container" class="nav-item">
+                <ul class="menu list">
+                    <li class="menu-item" id="Menu">
+                        Menu<i class="uil uil-angle-up"></i>
+                    </li>
+                    <li class="menu-item" id="Products">
+                        Events<i class="uil uil-angle-up"></i>
+                    </li>
+                    <li class="menu-item" id="Company">
+                        About & contact us<i class="uil uil-angle-up"></i>
+                    </li>
+                </ul>
+                <div class="drop-menu" id="Menu-list">
+                    <ul id="Menu-drop-down">
+                        <li id="first-drop-item" class="drop-item">Coffee</li>
+                        <li id="second-drop-item" class="drop-item">Cake</li>
+                        <li id="third-drop-item" class="drop-item">Delivery</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="logo-container" class="nav-item">
+                <a href="../HTML/Coffee House.html">
+                    <img src="../../figma/Logo.svg" alt="Cafe logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="choosing-part" class="section">
+            <div id="choosing-part-container">    
+              <div id="choosing-part-text-container" class="choosing-part-item">
+                  <h2>Be with us even in your home</h2>
+                  <h1>Delivery</h1>
+              </div>
+              <div id="choosing-part-products-container" class="choosing-part-item"></div>
+           </div> 
+            <div id="orders-page">
+            <i class="uil uil-times orders-page-close" id="close"></i>
+            <div id="get-orders">
+                <div id="first-order-item" class="get-orders-item">
+                    <i class="uil uil-times order-closing" id="first-order-close"></i>
+                    <span>Full English Break fast</span>
+                    <label for="breakfast-number">porsions:</label>
+                    <input type="number" name="number" id="breakfast-number">
+                </div>
+                <div id="second-order-item" class="get-orders-item">
+                    <i class="uil uil-times order-closing" id="second-order-close"></i>
+                    <span>French coffee</span>
+                    <label for="coffee-number">porsions:</label>
+                    <input type="number" name="number" id="coffee-number">
+                </div> 
+                <div id="third-order-item" class="get-orders-item">
+                    <i class="uil uil-times order-closing" id="third-order-close"></i>
+                    <span>Daily cake</span>
+                    <label for="cake-number">porsions:</label>
+                    <input type="number" name="number" id="cake-number">
+                </div>
+            </div> 
+        <div id="total-price">
+            <label for="total-price-section">Total:</label>
+            <input type="text" name="total" id="total-price-section" value="0$"><br>
+            <button id="calculate-button" onclick="calculator()">calculate</button>
+        </div>
+        <div id="info-part-delivery-container">
+            <label for="fullName">full name:</label>
+            <input type="text" name="fullName" id="fullName">
+            <label for="callingNumber">mobile number:</label>
+            <input type="number" name="callingNumber" id="callingNumber">
+            <label for="adressInput">adress for delivering:</label>
+            <input type="text" name="adressInput" id="adressInput">
+            <input type="submit" value="Submit" id="final-order-info">
+        </div>
+           </div>
+        </section>
+        <section id="list-part" class="section">
+            <div id="delivery-item-container">
+                <div id="special-break-fast" class="delivery-item">
+                    <div class="item-picture-container">
+                         <div class="picture">
+                             <img src="../Pictures/English breakfast.png" alt="break fast">
+                         </div>
+                         <div class="picture-info">
+                             <h2>special break fast<br><sub>(English)</sub></h2>
+                             <h3>8&#36;</h3>
+                         </div>
+                    </div>
+                    <i class="uil uil-shopping-cart-alt" id="break-fast-shop-icon"></i>
+                </div>
+                <div id="coffee-item" class="delivery-item">
+                    <div class="item-picture-container">
+                        <div class="picture">
+                            <img src="../Pictures/frech press in cafe.jpg" alt="break fast" id="french-press-picture">
+                        </div>
+                        <div class="picture-info">
+                            <h2>Take away coffee<br><sub>(French)</sub></h2>
+                            <h3>4&#36;</h3>
+                        </div>
+                   </div>
+                   <i class="uil uil-shopping-cart-alt" id="coffee-shop-icon"></i>
+                </div>
+                <div id="daily-cake" class="delivery-item">
+                    <div class="item-picture-container">
+                        <div class="picture">
+                            <img src="../Pictures/Red Velvet.jpg" alt="break fast" id="red-velvet-picture">
+                        </div>
+                        <div class="picture-info">
+                            <h2>Cake of the day<br><sub>(Red velvet)</sub></h2>
+                            <h3>5&#36;</h3>
+                        </div>
+                   </div>
+                   <i class="uil uil-shopping-cart-alt" id="daily-cake-shop-icon"></i>
+                </div>
+            </div>
+        </section>
+        <p id="demo"></p>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <!-- History -->
+        <div id="history-part" class="section">
+            <div id="history-text" class="history-item">
+                <h1>history</h1>
+                <p>Lorem ipsum dolor, 
+                    sit amet consectetur adipisicing elit. A debitis dicta nisi 
+                    nostrum quisquam veritatis tempora iusto voluptatem modi quibusdam?</p>
+                <span id="history-sign">Mani Davatgar</span>
+            </div>
+            <div id="history-picture" class="history-item">
+                <img src="../Pictures/bar.jpg" alt="Cafe bar">
+            </div>
+        </div>
+        <!-- Contacts -->
+        <div id="contacts-part">
+            <div id="contacts-container">
+                <div class="contacts-item">
+                    <img src="../../figma/Telephone.svg" alt="Telephone">Phone Number:<br>+989902708576
+                </div>
+                    <div class="contacts-item">
+                        <img src="../../figma/Compass.svg" alt="Compass">Location:<br>
+                    Iran, Guilan province, Bandar-e-Anzali</div>
+                   <div class="contacts-item">
+                        <a href="#">
+                            <i class="uil uil-github-alt github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="uil uil-whatsapp whatsapp"></i>
+                        </a>
+                        <a href="#">
+                            <i class="uil uil-linkedin-alt linkedin"></i>
+                        </a>
+                    </div>
+            </div>
+        </div>
+        <p id="E-mail">www.manidavatgar@gmail.com</p>
+        <p id="copyright">
+            &copy;Copyright2021example.am
+        </p>
+    </footer>
+</body>
+<script src="../JavaScript/delivery.js"></script>
+</html>

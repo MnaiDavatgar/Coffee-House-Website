@@ -1,0 +1,920 @@
+/* ==================== Google fonts ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Indie+Flower&family=Roboto:wght@300&display=swap');
+/* ================== Css Variables ===================== */
+:root{
+    /* =============== Colors ================ */
+    --background: hsl(0, 100%, 6%);
+    --text: #fff;
+    --text-hover-color: hsl(0, 0%, 49%);
+    --drop-down-menu: hsl(0, 100%, 14%);
+    --h-1-color: hsl(120, 100%, 22%);
+    --h-3-color: hsl(41, 85%, 18%);
+    /*==================== Font Families ================== */
+    --menu-bold-text: 'Anton', sans-serif;
+    --header-font-family: 'Roboto', sans-serif;
+    --text-font-family: 'Indie Flower', cursive;
+    --neon-lump-font-family: 'Comforter Brush', cursive;
+    --sign: 'Great Vibes', cursive;
+    /* ====================== Font Sizes ======================= */
+    --menu-bold-text-size: 5rem;
+    --header-font-size: 1.3rem;
+    --text-font-size: .8rem;
+    --menu-font-size: 1rem;
+    /* ====================== Font weights ===================== */
+    --thin: 400;
+    --semi-bold: 700;
+    --bold: 900;
+    /* ======================== Z-indexes ====================== */
+    --fixed-z-index: 100;
+    --absolute-z-index: 10;
+    /* ===================== Margin Bottom ====================== */
+    --m-b-1-5: 1.5rem;
+    --m-b-6: 15rem;
+}
+    /* ==================== Responsive Variables ================== */
+    @media screen and (min-width: 600px) {
+    :root{
+        /* ================ Typography =============== */
+        --header-font-size: 2rem;
+        --text-font-size: 1rem; 
+        --menu-font-size: 1.5rem;
+        --menu-bold-text-size: 9rem;
+       /* ================ Margin Bottom =============== */
+       --m-b-6: 23rem;
+    }
+}
+@media screen and (min-width: 1840px) {
+    :root{
+        /* ================ Typography =============== */
+        --header-font-size: 5.5rem;
+        --text-font-size: 2.5rem;
+        --menu-font-size: 2.5rem;   
+        --menu-bold-text-size: 14rem;
+        /* ================ Margin Bottom =============== */
+        --m-b-1-5: 3rem;
+    }
+}
+/* ===================== Reusable css classes  ====================== */
+.absolute{
+    position: absolute;
+    z-index: var(--absolute-z-index);
+}
+.section{
+    width: 130%;
+    height: 300px;
+    position: relative;
+    margin-bottom: var(--m-b-6);
+}
+.paragraph{
+    width: 80%;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60%;
+    height: 73%;
+    background-color: #fff;
+    text-align: center;
+    color: #000;
+}
+.text-container > *{
+    margin-bottom: var(--m-b-1-5);
+}
+.text-container h1{
+    border-top: 1px solid var(--text-hover-color);
+    border-bottom: 1px solid var(--text-hover-color);
+    padding: .5rem 0;
+}
+.item-element{
+    float: left;
+}
+/* ========================= Basics ========================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--background);
+    font-size: var(--text-font-size);
+    font-family: var(--text-font-family);
+    color: var(--text);
+    min-height: 100vh;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1, h3{
+    display: block;
+    font-family: var(--header-font-family);
+    font-weight: var(--semi-bold);
+    text-transform: uppercase;
+}
+h3{
+    color: var(--h-3-color);
+}
+h1{
+    font-size: var(--header-font-size);
+    font-weight: var(--bold);
+    color: var(--h-1-color);
+}
+p{
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    list-style: none;
+}
+li{
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: var(--bold);
+    font-size: var(--menu-font-size);
+}
+/* ===================== Navigation Bar ==================== */
+header{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--fixed-z-index);
+    border-bottom: 1px solid #fff;
+}
+nav{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+}
+#menu-container{
+    width: 60%;
+    height: auto;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    position: relative;
+}
+.list{
+    border-top: none;
+    border-bottom: none;
+}
+.menu-item{
+    cursor: pointer;
+    float: left;
+    font-size: var(--menu-font-size);
+}
+.menu-item:hover{
+    color: var(--text-hover-color);
+}
+.drop-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--absolute-z-index);
+    background-color: var(--drop-down-menu);
+    width: 60%;
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+#Menu-drop-down{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+#Menu-drop-down li{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    margin-bottom: 40px;
+    border-bottom: 1px solid #fff;
+}
+#Menu-drop-down li:nth-child(3){
+    margin-bottom: 25px;
+}
+#Menu-drop-down li:last-child{
+    border-bottom: none;
+}
+.drop-item{
+    cursor: pointer;
+}
+.drop-item:hover{
+    background-color: var(--text-hover-color);
+}
+#logo-container{
+    width: 40%;
+    height: 100px;
+    border-bottom: none;
+    display: flex;
+    justify-content: flex-end;
+}
+#logo-container img{
+    height: 100px;
+}
+#go-to-top-button{
+    position: fixed;
+    z-index: var(--fixed-z-index);
+    right: .5rem;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 300%;
+    display: none;
+    transition: .2s;
+}
+#go-to-top-button i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#go-to-top-button:hover{
+    background-color: rgba(255, 0, 0, 1);
+}
+/* ========================== Main =========================== */
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#rope{
+    width: 60%;
+    height: 250px;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-image: url(../Pictures/Rope.jpeg) 8 round;
+}
+#body-menu-container{
+    position: relative;
+    width: 70%;
+    height: 5600px;
+    background-image: url(../Pictures/wood.jpeg);
+    margin-bottom: var(--m-b-1-5);
+}
+#daily-information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 160px;
+    background-color: rgba(0, 31, 0, 0.8);
+    top: 5rem;
+    right: -10%;
+    padding: 2rem 1rem 1rem;
+    box-shadow: -5px 5px 5px 2px #000;
+    border-radius: 5px;
+}
+#daily-information-text h1{
+    color: #fff;
+    border-bottom: 1px solid var(--text);
+    padding-bottom: .8rem;
+    margin-bottom: 1rem;
+}
+#menu-bold-text{
+    position: absolute;
+    z-index: 11;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#menu-bold-text h1{
+    font-family: var(--menu-bold-text);
+    font-size: var(--menu-bold-text-size);
+    font-weight: var(--bold);
+    color: #fff;
+    letter-spacing: 2rem;
+    text-shadow: 0 0 5px #000,
+    0 0 10px #000,
+    0 0 20px #000,
+    0 0 35px #000,
+    0 5px 10px #000;
+}
+/* ========================= first item ========================= */
+#menu-items-container{
+    margin-top: 32rem;
+}
+#first-colored-part{
+    background-color: rgba(235, 85, 5, 0.8);
+    width: 130%;
+    height: 300px;
+    position: relative;
+    box-shadow: 8px 15px 20px #000;
+    margin-left: -15%;
+    margin-bottom: 12rem;
+}
+#first-item-text{
+    z-index: 9;
+    left: -3%;
+    top: 200px;
+    padding-right: 3rem;
+    box-shadow: -5px 7px 10px #000,
+    -5px 7px 30px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#first-item-picture{
+    background-image: url(../Pictures/English\ breakfast.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height:90%;
+    right: 0;
+    top: -200px;
+    box-shadow: 0 0 5px #000,
+    0 0 10px #000,
+    0 0 25px #000,
+    0 0 35px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+/* ========================= second item ========================= */
+#second-colored-part{
+    background-color: rgba(66, 0, 66, 0.8);
+    left: -20%;
+}
+#second-item-text{
+    bottom: -10%;
+    left: 5%;
+    transform: rotate(-180deg);
+    box-shadow: 0 5px 5px #000,
+    0 5px 10px #000,
+    0 5px 20px #000;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+#second-item-picture{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 13%;
+    right: -7%;
+    z-index: 9;
+    background-image: url(../Pictures/syrian\ breakfast.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 50px #000,
+    5px 5px 50px #000,
+    5px 5px 50px #000,
+    5px 5px 50px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+/* ========================= third item ========================= */
+#third-colored-part{
+    background-color: rgba(251, 201, 19, 0.8);
+    box-shadow: 8px 15px 20px #000;
+    margin-left: -15%;
+}
+#third-item-text{
+    top: 200px;
+    left: -3%;
+    padding-right: 3rem;
+    box-shadow: -5px 7px 10px #000,
+    -5px 7px 30px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#third-item-picture{
+    background-image: url(../Pictures/French\ breakfast.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height:90%;
+    right: 0;
+    top: -200px;
+    box-shadow: 0 0 5px #000,
+    0 0 10px #000,
+    0 0 25px #000,
+    0 0 35px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+/* ========================= fourth item ========================= */
+#fourth-colored-part{
+    background-color: rgba(255, 0, 0, 0.8);
+    box-shadow: 8px 15px 20px #000;
+    margin-left: -15%;
+}
+#fourth-item-text{
+    z-index: 9;
+    top: 200px;
+    left: -3%;
+    padding-right: 3rem;
+    box-shadow: -5px 7px 10px #000,
+    -5px 7px 30px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#fourth-item-picture{
+    background-image: url(../Pictures/American\ breakfast.png);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height:90%;
+    right: 0;
+    top: -200px;
+    box-shadow: 0 0 5px #000,
+    0 0 10px #000,
+    0 0 25px #000,
+    0 0 35px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+/* ========================= fifth item ========================= */
+#fifth-colored-part{
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 8px 15px 20px #000;
+    margin-left: -15%;
+}
+#fifth-item-text{
+    z-index: 9;
+    top: 200px;
+    left: -3%;
+    padding-right: 3rem;
+    box-shadow: -5px 7px 10px #000,
+    -5px 7px 30px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#fifth-item-picture{
+    background-image: url(../Pictures/latte\ menu.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height:90%;
+    right: 0;
+    top: -200px;
+    box-shadow: 0 0 5px #000,
+    0 0 10px #000,
+    0 0 25px #000,
+    0 0 35px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+/* ========================= sixth item ========================= */
+#sixth-colored-part{
+    background-color: rgba(122, 73, 0, 0.8);
+    box-shadow: 8px 15px 20px #000;
+    margin-left: -15%;
+}
+#sixth-item-text{
+    z-index: 9;
+    top: 200px;
+    left: -3%;
+    padding-right: 3rem;
+    box-shadow: -5px 7px 10px #000,
+    -5px 7px 30px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#sixth-item-picture{
+    background-image: url(../Pictures/espresso\ menu.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height:90%;
+    right: 0;
+    top: -200px;
+    box-shadow: 0 0 5px #000,
+    0 0 10px #000,
+    0 0 25px #000,
+    0 0 35px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+/* ========================= seventh item ========================= */
+#seventh-colored-part{
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 8px 15px 20px #000;
+    margin-left: -15%;
+}
+#seventh-item-text{
+    z-index: 9;
+    top: 200px;
+    left: -3%;
+    padding-right: 3rem;
+    box-shadow: -5px 7px 10px #000,
+    -5px 7px 30px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#seventh-item-picture{
+    background-image: url(../Pictures/cold\ brew\ menu.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height:90%;
+    right: 0;
+    top: -200px;
+    box-shadow: 0 0 5px #000,
+    0 0 10px #000,
+    0 0 25px #000,
+    0 0 35px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+/* ========================= eighth item ========================= */
+#eighth-colored-part{
+    background-color: rgba(229, 82, 82, 0.8);
+    box-shadow: 8px 15px 20px #000;
+    margin-left: -15%;
+}
+#eighth-item-text{
+    z-index: 9;
+    top: 200px;
+    left: -3%;
+    padding-right: 3rem;
+    box-shadow: -5px 7px 10px #000,
+    -5px 7px 30px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#eighth-item-picture{
+    background-image: url(../Pictures/v60\ menu.webp);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height:90%;
+    right: 0;
+    top: -200px;
+    box-shadow: 0 0 5px #000,
+    0 0 10px #000,
+    0 0 25px #000,
+    0 0 35px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+/* ========================= ninth item ========================= */
+#ninth-colored-part{
+    background-color: rgba(0, 255, 0, 0.8);
+    box-shadow: 8px 15px 20px #000;
+    margin-left: -15%;
+}
+#ninth-item-text{
+    z-index: 9;
+    top: 200px;
+    left: -3%;
+    padding-right: 3rem;
+    box-shadow: -5px 7px 10px #000,
+    -5px 7px 30px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#ninth-item-picture{
+    background-image: url(../Pictures/chemex\ menu.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height:90%;
+    right: 0;
+    top: -200px;
+    box-shadow: 0 0 5px #000,
+    0 0 10px #000,
+    0 0 25px #000,
+    0 0 35px #000;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+/* ============================= Footer =========================== */
+/* =================== History Part ==================== */
+#history-part{
+    position: relative;
+    background-color: rgba(20, 20, 20, 0.8);
+    height: 700px;
+}
+#history-sign{
+    display: block;
+    font-family: var(--sign);
+    font-size: var(--neon-lump-font-family);
+}
+#history-text{
+    text-align: center;
+    padding-top: 2rem;
+}
+#history-text h1{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: inherit;
+}
+#history-text > *{
+    margin-bottom: 2rem;
+}
+#history-picture img{
+    width: 100%;
+    height: 350px;
+}
+.history-item{
+    width: 100%;
+    height: 350px;
+}
+#history-part::after{
+    content: '';
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background-image: url(../../figma/fundation.svg);
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ========================= Contacts Part ======================== */
+.footer{
+    margin-bottom: var(--m-b-1-5);
+    width: 100%;
+    height: auto;
+}
+#contacts-part{
+    height: auto;
+    margin-bottom: 2rem;
+}
+#contacts-container{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    height: auto;
+}
+.contacts-item{
+    font-family: var(--text-font-family);
+    font-size: 1rem;
+    font-weight: var(--bold);
+    width: 100%;
+    height: 100px;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.contacts-item:last-child{
+    justify-content: space-around;
+    border-bottom: none;
+}
+.contacts-item i{
+    font-size: 2rem;
+}
+.contacts-item img{
+    width: 50px;
+    height: 50px;
+}
+.github:hover{
+    color: hsl(285, 100%, 31%);
+}
+.whatsapp:hover{
+    color: hsl(120, 100%, 50%);
+}
+.linkedin:hover{
+    color: hsl(210, 100%, 40%);
+}
+#E-mail{
+    width: 100%;   
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+#copyright{
+    text-align: center;
+}
+/* ====================== Media Queries ====================== */
+@media screen and (max-width: 600px) {
+    #menu-container,
+    .drop-menu
+    {
+        width: 100%;
+    }
+    #menu-container{
+        order: 2;
+    }
+    #logo-container{
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        order: 1;
+        justify-content: center;
+    }
+    nav{
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 600px) {
+    #body-menu-container{
+        height: 8000px;
+    }
+    #rope{
+        height: 150px;
+    }
+    #daily-information{
+        top: 8rem;
+        height: 400px;
+    }
+    #daily-information-text{
+        width: 50%;
+    }
+    #menu-bold-text h1{
+        letter-spacing: 3rem;
+    }
+    #menu-bold-text{
+        top: 2.8rem;
+    }
+    #first-colored-part{
+        margin-bottom: 20rem;
+    }
+    #menu-items-container{
+        margin-top: 42rem;
+    }
+    #first-colored-part,
+    #third-colored-part,
+    #fourth-colored-part,
+    #fifth-colored-part,
+    #sixth-colored-part,
+    #seventh-colored-part,
+    #eighth-colored-part,
+    #ninth-colored-part
+    {
+        height: 430px;
+    }
+    #first-item-text,
+    #third-item-text,
+    #fourth-item-text,
+    #sixth-colored-part,
+    #seventh-colored-part,
+    #eighth-colored-part,
+    #ninth-colored-part
+    {
+        padding-right: 8rem;
+    }
+    #second-colored-part{
+        height: 530px;
+    }
+    #contacts-part{
+        padding: 0 5rem;
+    }
+    .contacts-item{
+        float: left;
+        width: 33.33%;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .contacts-item:last-child{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .contacts-item:first-child{
+        border-left: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .history-item{
+        float: left;
+        width: 50%;
+    }
+    #history-part{
+        height: 400px;
+    }
+    #history-text{
+        text-align: left;
+        padding-left: 2rem;
+    }
+    #history-picture img{
+        height: 400px;
+    }
+}
+@media screen and (min-width: 1840px) {
+    header, 
+    nav, 
+    .menu,
+    #logo-container,
+    #logo-container img
+    {
+        height: 200px;
+    }
+    #body-menu-container{
+        height: 10000px;
+    }
+    #rope{
+        height: 350px;
+    }
+    #daily-information{
+        height: 700px;
+        top: 13rem;    
+    }
+    #menu-items-container{
+        margin-top: 70rem;
+    }
+    #second-colored-part{
+        margin-bottom: 20rem;
+    }
+    #first-colored-part,
+    #third-colored-part,
+    #fourth-colored-part,
+    #fifth-colored-part,
+    #sixth-colored-part,
+    #seventh-colored-part,
+    #eighth-colored-part,
+    #ninth-colored-part
+    {
+        height: 850px;
+    }
+    #second-colored-part{
+        height: 970px;
+    }
+    .contacts-item{
+        height: 200px;
+    }
+    .contacts-item img{
+        width: 120px;
+        height: 120px;
+    }
+    .contacts-item i{
+        font-size: 4rem;
+    }
+    #history-part{
+        height: 600px;
+    }
+    #history-picture img{
+        height: 600px;
+    }
+    #history-part::after{
+        width: 200px;
+        height: 200px;
+    }
+}
+/* ========================= scroll animations ========================= */
+@keyframes littlePicture {
+    0%
+    {
+        top: -200px;
+    }
+    100%
+    {
+        top: -20px;
+    }
+}
+@keyframes bigPicture {
+    0%
+    {
+        width: 0;
+        height: 0;
+    }
+    100%
+    {
+        width: 95%;
+        height: 90%;
+    }
+}
+@keyframes backTextContainer {
+    0%
+    {
+        top: 200px;
+    }
+    100%
+    {
+        top: 0;
+    }
+}
+@keyframes frontTextContainer {
+    0%
+    {
+        transform: rotate(-180deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}

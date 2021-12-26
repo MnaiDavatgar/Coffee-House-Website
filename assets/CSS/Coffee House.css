@@ -1,0 +1,1026 @@
+/* ==================== Google fonts ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans+Condensed:wght@300&family=Shippori+Antique&display=swap');
+/* ================== Css Variables ===================== */
+:root{
+    /* =============== Colors ================ */
+    --neon-light: hsl(0, 100%, 50%);
+    --neon-lump: hsl(0, 74%, 71%);
+    --background: hsl(0, 100%, 3%);
+    --text: #fff;
+    --text-hover-color: hsl(0, 0%, 49%);
+    --drop-down-menu: hsl(0, 100%, 14%);
+    /*==================== Font Families ================== */
+    --neon-lump-font-family: 'Comforter Brush', cursive;
+    --sign: 'Great Vibes', cursive;
+    --header-font-family: 'Open Sans Condensed', sans-serif;
+    --text-font-family: 'Shippori Antique', sans-serif;
+    /* ====================== Font Sizes ======================= */
+    --neon-lump-font-size: 1.8rem;
+    --header-font-size: 3rem;
+    --text-font-size: .8rem;
+    --menu-font-size: 1rem;
+    /* ====================== Font weights ===================== */
+    --thin: 400;
+    --semi-bold: 700;
+    --bold: 900;
+    /* ======================== Z-indexes ====================== */
+    --fixed-z-index: 100;
+    --absolute-z-index: 10;
+    /* ===================== Margin Bottom ====================== */
+    --m-b-1-5: 1.5rem;
+}
+    /* ==================== Responsive Variables ================== */
+    @media screen and (min-width: 600px) {
+    :root{
+        /* ================ Typography =============== */
+        --neon-limp-font-size: 2.6rem;
+        --header-font-size: 3.5rem;
+        --text-font-size: 1rem; 
+        --menu-font-size: 1.5rem;
+    }
+}
+@media screen and (min-width: 1840px) {
+    :root{
+        /* ================ Typography =============== */
+        --neon-limp-font-size: 4.6rem;
+        --header-font-size: 5.5rem;
+        --text-font-size: 2.5rem;
+        --menu-font-size: 2.5rem;   
+        /* ================ Margin Bottom =============== */
+        --m-b-1-5: 5.5rem;
+    }
+}
+/* ========================= Basics ========================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+    font-size: var(--text-font-size);
+    font-family: var(--text-font-family);
+    color: var(--text);
+    min-height: 100vh;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1{
+    display: inline-block;
+    font-size: var(--header-font-size);
+    font-family: var(--header-font-family);
+}
+p{
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    list-style: none;
+}
+li{
+    text-transform: uppercase;
+}
+/* ====================== Reusable Classes ====================== */
+.section{
+    margin-bottom: var(--m-b-1-5);
+    width: 100%;
+    height: auto;
+}
+.aside-parts{
+    float: left;
+}
+/* ===================== Navigation Bar ==================== */
+header{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--fixed-z-index);
+    border-bottom: 1px solid #fff;
+}
+nav{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+}
+#menu-container{
+    width: 60%;
+    height: auto;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    position: relative;
+}
+.list{
+    border-top: none;
+    border-bottom: none;
+}
+.menu-item{
+    cursor: pointer;
+    float: left;
+    font-size: var(--menu-font-size);
+}
+.menu-item:hover{
+    color: var(--text-hover-color);
+}
+.drop-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--absolute-z-index);
+    background-color: var(--drop-down-menu);
+    width: 60%;
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+#Menu-drop-down{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+#Menu-drop-down li{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    margin-bottom: 40px;
+    border-bottom: 1px solid #fff;
+}
+#Menu-drop-down li:nth-child(3){
+    margin-bottom: 25px;
+}
+#Menu-drop-down li:last-child{
+    border-bottom: none;
+}
+.drop-item{
+    cursor: pointer;
+}
+.drop-item:hover{
+    background-color: var(--text-hover-color);
+}
+#logo-container{
+    width: 40%;
+    height: 100px;
+    border-bottom: none;
+    display: flex;
+    justify-content: flex-end;
+}
+#logo-container img{
+    height: 100px;
+}
+/* ================================ Main ================================== */
+main{
+    width: 100%;
+    height: auto;
+    margin-bottom: 6rem;
+}
+/* =========================== Home ============================ */
+#home-picture{
+    width: 49%;
+    height: 600px;
+    background-image: url(../Pictures/Espresso\ and\ beanss.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    filter: grayscale(0%);
+    animation-name: homeColorAnime;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+#home-text-container{
+    width: 51%;
+    height: 600px;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: -40px -45px 50px #000;
+}
+#home-text{
+    width: 230px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.box{
+    display: block;
+}
+#home-text span{
+    color: black;
+    font-family: var(--neon-lump-font-family);
+    font-size: var(--neon-lump-font-size);
+    margin-bottom: 20px;
+    text-shadow: none;
+    animation-name: first-anime;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#home-text h1{
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+    font-weight: 900;
+}
+/* ============================ SVG Menu ============================ */
+#svg-menu-container{
+    width: 100%;
+    height: 200px;
+    padding: 3.125rem 0;
+}
+.svg-menu{
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#svg-menu-item{
+    text-transform: unset;
+    font-size: var(--menu-font-size);
+}
+#svg-menu-item a img{
+    width: 60%;
+    transition: .5s;
+}
+#svg-menu-item:hover a img{
+    width: 70%;
+}
+/* =========================== First Part ============================= */
+#first-part-container{
+    width: 100%;
+    height: auto;
+}
+.first-part-item{
+    width: 50%;
+    height: 500px;
+}
+#first-part-black{
+    background-color: #000;
+    position: absolute;
+    top: 848px;
+    right: 0;
+    padding: 5rem 0;
+    opacity: 0;
+    text-align: left;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#first-part-text-container{
+    width: 300px;
+    margin-left: -10%;
+}
+#first-part-text-container span{
+    color: #000;
+    text-shadow: none;
+    font-family: var(--neon-lump-font-family);
+    font-size: var(--neon-lump-font-size);
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#first-part-text-container h1{
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+}
+/* =========================== Second Part ============================= */
+#second-part-container{
+    width: 100%;
+    height: 500px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#second-part-container img{
+    width: 50%;
+    height: inherit;
+}
+#second-part-text-container{
+    text-align: left;   
+    width: 40%;
+    position: absolute;
+    top: 1400px;
+    left: 7%;
+}
+#second-part-link{
+    opacity: 0;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+#second-part-text-container a:hover{
+    color: var(--text-hover-color);
+}
+#secondNeon{
+    color: #000;
+    text-shadow: none;
+    font-family: var(--neon-lump-font-family);
+    font-size: var(--neon-lump-font-size);
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#secondText {
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+    margin-top: -3rem;
+    opacity: 0;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+#thirdText {
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+    margin-top: -3rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+/* ==================== Gallery ===================== */
+#gallery-header{
+    color: #000;
+    text-shadow: none;
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+    text-transform: uppercase;
+    margin-left: 5%;
+    margin-bottom: .3rem;
+    letter-spacing: .2rem;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.splide__slide img{
+    width: 100%;
+    height: 500px;
+}
+#cookies-picture{
+    height: 500px;
+}
+#break-fast-picture{
+    height: 500px;
+}
+/* ================ Slider Arrows ================= */
+.splide__arrows .splide__arrow{
+    background-color: #f00;
+    width: 50px;
+    height: 50px;
+}
+#gallery-part{
+    padding: 0 2rem;
+}
+/* =========================== Third Part ============================ */
+.third-part-item{
+    width: 50%;
+    height: 500px;
+}
+#third-part-text-container > *{
+    display: block;
+}
+#third-part-link{
+    opacity: 0;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+#third-part-black{
+    position: absolute;
+    right: 0;
+    background-color: #000;
+    text-align: left;
+    padding: 0;
+    opacity: 0;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#third-part-text-container{
+    position: absolute;
+    width: 500px;
+    margin-left: -10%;
+}
+#thirdNeon{
+    color: #000;
+    text-shadow: none;
+    font-family: var(--neon-lump-font-family);
+    font-size: var(--neon-lump-font-size);
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#third-part-text-container h1{
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+}
+#third-part-link:hover{
+    color: var(--text-hover-color);
+}
+#big-c{
+    position: absolute;
+    top: 2600px;
+    font-size: 15rem;
+    color: var(--neon-light);
+    text-shadow: 0 0 10px var(--neon-light),
+    0 0 20px var(--neon-light);
+}
+#third-part-text-container h1{
+    margin-right: 5rem;
+}
+/* ============================== Fourth Part ============================ */
+#fourth-part-container{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#fourth-part-text-container{
+    text-align: center;
+    padding: 3rem 0;
+    height: 250px;
+}
+#fourthNeon{
+    color: #000;
+    text-shadow: none;
+    font-family: var(--neon-lump-font-family);
+    font-size: var(--neon-lump-font-size);
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    margin-left: 10%;
+}
+#fourth-part-heahder{
+    opacity: 1;
+    transform: rotate(0deg);
+    animation-name: example;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+#fourth-part-paragraph{
+    opacity: 0;
+    margin-top: -5rem;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+#fourth-part-link{
+    opacity: 0;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+.fourth-part-item{
+    width: 100%;
+}
+#fourth-part-link:hover{
+    color: var(--text-hover-color);
+}
+#fourth-part-heahder{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+#fourth-part-paragraph{
+    margin-bottom: .5rem;
+}
+#fourth-part-image-container img{
+    width: 50%;
+    height: 200px;
+    float: left;
+}
+/* ============================= Footer =========================== */
+/* =================== History Part ==================== */
+#history-part{
+    position: relative;
+    background-color: rgba(20, 20, 20, 0.8);
+    height: 700px;
+}
+#history-sign{
+    display: block;
+    font-family: var(--sign);
+    font-size: var(--neon-lump-font-family);
+}
+#history-text{
+    text-align: center;
+}
+#history-text h1{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#history-text > *{
+    margin-bottom: 2rem;
+}
+#history-picture img{
+    width: 100%;
+    height: 350px;
+}
+.history-item{
+    width: 100%;
+    height: 350px;
+}
+#history-part::after{
+    content: '';
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background-image: url(../../figma/fundation.svg);
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ========================= Contacts Part ======================== */
+#contacts-part{
+    height: auto;
+    margin-bottom: 2rem;
+}
+#contacts-container{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    height: auto;
+}
+.contacts-item{
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+    font-weight: var(--bold);
+    width: 100%;
+    height: 100px;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.contacts-item:last-child{
+    justify-content: space-around;
+    border-bottom: none;
+}
+.contacts-item i{
+    font-size: 2rem;
+}
+.contacts-item img{
+    width: 50px;
+    height: 50px;
+}
+.github:hover{
+    color: hsl(285, 100%, 31%);
+}
+.whatsapp:hover{
+    color: hsl(120, 100%, 50%);
+}
+.linkedin:hover{
+    color: hsl(210, 100%, 40%);
+}
+#E-mail{
+    width: 100%;   
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+#copyright{
+    text-align: center;
+}
+/* ============================= Media Queries ============================== */
+@media screen and (min-width: 600px) {
+    #contacts-part{
+        padding: 0 5rem;
+    }
+    .contacts-item{
+        float: left;
+        width: 33.33%;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .contacts-item:last-child{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .contacts-item:first-child{
+        border-left: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .fourth-part-item{
+        width: 50%;
+    }
+    #fourth-part-text-container{
+        text-align: left;
+        height: 500px;
+        margin-left: 7.5rem;
+    }
+    #fourth-part-container{
+        flex-direction: row;
+    }
+    #fourth-part-image-container img{
+        height: 500px;
+    }
+    #fourth-part-text{
+        width: 300px;
+    }
+    #fourth-part-paragraph{
+        margin-bottom: 1rem;
+    }
+    .history-item{
+        float: left;
+        width: 50%;
+    }
+    #history-part{
+        height: 400px;
+    }
+    #history-text{
+        text-align: left;
+        padding-left: 2rem;
+    }
+    #history-picture img{
+        height: 400px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #menu-container,
+    .drop-menu
+    {
+        width: 100%;
+    }
+    #menu-container{
+        order: 2;
+    }
+    #logo-container{
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        order: 1;
+        justify-content: center;
+    }
+    nav{
+        flex-direction: column;
+    }
+    #home-text{
+        top: 60%;
+        left: -50%;
+        text-align: center;
+    }
+    #home-picture{
+        width: 100%;
+    }
+    #home-text-container{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .svg-menu{
+        width: 100%;
+        float: none;
+    }
+    #svg-menu-container{
+        height: 300px;
+        padding: 2.125rem 0;
+    }
+    .svg-menu:first-child{
+        margin-bottom: 25px;
+    }
+    #first-part-container img{
+        width: 70%;
+    }
+    #first-part-black{
+        width: 30%;
+        top: 948px;
+    }
+    #first-part-text-container{
+        margin-left: -208%;
+    }
+    #second-part-container img{
+        width: 70%;
+    }
+    #second-part-text-container{
+        top: 1500px;
+    }
+    #second-part-text-container h1{
+        font-size: 2rem;
+    }
+    .splide__slide img{
+        height: 240px;
+    }
+    #cookies-picture{
+        height: 240px;
+    }
+    #break-fast-picture{
+        height: 240px;
+    }
+    #gallery-part{
+        padding: 0 1rem;
+    }
+    .splide__arrows .splide__arrow{
+        width: 30px;
+        height: 30px;
+    }
+    #third-part-container img{
+        width: 70%;
+    }
+    #third-part-black{
+        width: 30%;
+    }
+    #third-part-text-container{
+        margin-left: -130%;
+        width: 300px;
+    }
+    #big-c{
+        position: absolute;
+        top: 2600px;
+        font-size: 9rem;
+    }
+}
+@media screen and (min-width: 1840px) {
+    header, 
+    nav, 
+    .menu,
+    #logo-container,
+    #logo-container img
+    {
+        height: 200px;
+    }
+    .contacts-item{
+        height: 200px;
+    }
+    .contacts-item img{
+        width: 120px;
+        height: 120px;
+    }
+    .contacts-item i{
+        font-size: 4rem;
+    }
+    #home-picture,
+    #home-text-container{
+        height: 900px;
+    }
+    #svg-menu-container{
+        height: 300px;
+        padding: 0;
+    }
+    #first-part-black{
+        top: 1373px;
+    }
+    .first-part-item{
+        height: 750px;
+    }
+    #second-part-container{
+        height: 750px;
+    }
+    #second-part-text-container{
+        top: 2300px;
+    }
+    .splide__slide img{
+        width: 100%;
+        height: 760px;
+    }
+    #cookies-picture{
+        height: 760px;
+    }
+    #break-fast-picture{
+        height: 760px;
+    }
+    .splide__arrows .splide__arrow{
+        width: 100px;
+        height: 100px;
+    }
+    #gallery-part{
+        padding: 0 4rem;
+    }
+    .third-part-item{
+        height: 750px;
+    }
+    #big-c{
+        top: 4300px;
+        margin-left: 10rem;
+    }
+    #fourth-part-text{
+        width: 600px;
+    }
+    #fourth-part-text-container{
+        height: 670px;
+    }
+    #fourth-part-image-container img{
+        height: 670px;
+    }
+    #history-part{
+        height: 600px;
+    }
+    #history-picture img{
+        height: 600px;
+    }
+    #history-part::after{
+        width: 200px;
+        height: 200px;
+    }
+}
+/* ======================= Absolute Animations ====================== */
+@keyframes first-anime {
+    0%
+    {
+        color: #000;
+        text-shadow: none;
+    }
+    25%
+    {
+        color: var(--neon-lump);
+        text-shadow: none;
+    }
+    50%
+    {
+        color: #000;
+        text-shadow: none;
+    }
+    75%
+    {
+        color: var(--neon-lump);
+        text-shadow: none;
+    }
+    100%
+    {
+    color: var(--neon-lump);
+    text-shadow: 0 0 5px var(--neon-light),
+    0 0 5px var(--neon-light),
+    0 0 5px var(--neon-light),
+    0 0 5px var(--neon-light);
+    }
+}
+@keyframes homeColorAnime {
+    0%
+    {
+        filter: grayscale(100%);
+    }
+    100%
+    {
+        filter: grayscale(0%);
+    }
+}
+@keyframes linksAnime {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+/* ========================= Scroll Animations ========================== */
+/* ================= Neon Light ================== */
+@keyframes neonAnimation {
+    0%
+    {
+        color: #000;
+        text-shadow: none;
+    }
+    25%{
+        color: var(--neon-lump);
+        text-shadow: none;
+    }
+    50%
+    {
+        color: #000;
+        text-shadow: none;
+    }
+    75%
+    {
+        color: var(--neon-lump);
+        text-shadow: none;
+    }
+    100%
+    {
+    color: var(--neon-lump);
+    text-shadow: 0 0 5px var(--neon-light),
+    0 0 5px var(--neon-light),
+    0 0 5px var(--neon-light),
+    0 0 5px var(--neon-light);
+    }
+}
+/* ================= Text Falling ================== */
+@keyframes textAnimation {
+    0%
+    {
+        padding: 5rem 0;
+        opacity: 0;
+    }
+    100%
+    {
+        padding: 9rem 0;
+        opacity: 1;
+    }
+}
+@keyframes secondTextAnimation {
+    0%
+    {
+        opacity: 0;
+        margin-top: -3rem;
+    }
+    100%
+    {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes thirdTextAnimation {
+    0%
+    {
+        opacity: 0;
+        margin-top: -3rem;
+    }
+    100%
+    {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes fourthTextAnimation {
+    0%
+    {
+        opacity: 0;
+        padding: 0;
+    }
+    100%
+    {
+        opacity: 1;
+        padding: 5rem 0;
+    }
+}
+@keyframes fifthTextAnimation {
+    0%
+    {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100%
+    {
+        background-color: rgba(0, 0, 0, 1);
+    }
+}
+@keyframes seventhTextAnimation {
+    0%
+    {
+        margin-top: -5;
+        opacity: 0;
+    }
+    100%
+    {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+/* ======================= Fourth Header Shaking ======================= */
+@keyframes fourthHeaderShakingAnime {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    11.11%
+    {
+        transform: rotate(12deg);
+    }
+    22.22%
+    {
+        transform: rotate(0deg);
+    }
+    33.33%
+    {
+        transform: rotate(-12deg);
+    }
+    44.44%
+    {
+        transform: rotate(0deg);
+    }
+    55.55%
+    {
+        transform: rotate(12deg);
+    }
+    66.66%
+    {
+        transform: rotate(0deg);
+    }
+    77.77%
+    {
+        transform: rotate(-12deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}

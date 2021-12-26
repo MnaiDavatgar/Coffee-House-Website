@@ -1,0 +1,641 @@
+/* ==================== Google fonts ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans+Condensed:wght@300&family=Shippori+Antique&display=swap');
+/* ================== Css Variables ===================== */
+:root{
+    /* =============== Colors ================ */
+    --neon-light: hsl(0, 100%, 50%);
+    --neon-lump: hsl(0, 74%, 71%);
+    --background: hsl(0, 100%, 3%);
+    --text: #fff;
+    --text-hover-color: hsl(0, 0%, 49%);
+    --drop-down-menu: hsl(0, 100%, 14%);
+    /*==================== Font Families ================== */
+    --neon-lump-font-family: 'Comforter Brush', cursive;
+    --sign: 'Great Vibes', cursive;
+    --header-font-family: 'Open Sans Condensed', sans-serif;
+    --text-font-family: 'Shippori Antique', sans-serif;
+    /* ====================== Font Sizes ======================= */
+    --neon-lump-font-size: 1.8rem;
+    --header-font-size: 3rem;
+    --text-font-size: .8rem;
+    --menu-font-size: 1rem;
+    /* ====================== Font weights ===================== */
+    --thin: 400;
+    --semi-bold: 700;
+    --bold: 900;
+    /* ======================== Z-indexes ====================== */
+    --fixed-z-index: 100;
+    --absolute-z-index: 10;
+    /* ===================== Margin Bottom ====================== */
+    --m-b-1-5: 1.5rem;
+}
+    /* ==================== Responsive Variables ================== */
+    @media screen and (min-width: 600px) {
+    :root{
+        /* ================ Typography =============== */
+        --neon-limp-font-size: 2.6rem;
+        --header-font-size: 3.5rem;
+        --text-font-size: 1rem; 
+        --menu-font-size: 1.5rem;
+    }
+}
+@media screen and (min-width: 1840px) {
+    :root{
+        /* ================ Typography =============== */
+        --neon-limp-font-size: 4.6rem;
+        --header-font-size: 5.5rem;
+        --text-font-size: 2.5rem;
+        --menu-font-size: 2.5rem;   
+        /* ================ Margin Bottom =============== */
+        --m-b-1-5: 5.5rem;
+    }
+}
+/* ========================= Basics ========================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+    font-size: var(--text-font-size);
+    font-family: var(--text-font-family);
+    color: var(--text);
+    min-height: 100vh;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1{
+    display: inline-block;
+    font-size: var(--header-font-size);
+    font-family: var(--header-font-family);
+}
+p{
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    list-style: none;
+}
+li{
+    text-transform: uppercase;
+}
+span{
+    display: block;
+}
+sub{
+    font-size: 1rem;
+    margin-left: .5rem;
+}
+/* ====================== Reusable Classes ====================== */
+.section{
+    margin-bottom: var(--m-b-1-5);
+    width: 100%;
+    height: auto;
+}
+/* ===================== Navigation Bar ==================== */
+header{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--fixed-z-index);
+    border-bottom: 1px solid #fff;
+}
+nav{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+}
+#menu-container{
+    width: 60%;
+    height: auto;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    position: relative;
+}
+.list{
+    border-top: none;
+    border-bottom: none;
+}
+.menu-item{
+    cursor: pointer;
+    float: left;
+    font-size: var(--menu-font-size);
+}
+.menu-item:hover{
+    color: var(--text-hover-color);
+}
+.drop-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--absolute-z-index);
+    background-color: var(--drop-down-menu);
+    width: 60%;
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+#Menu-drop-down{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+#Menu-drop-down li{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    margin-bottom: 40px;
+    border-bottom: 1px solid #fff;
+}
+#Menu-drop-down li:nth-child(3){
+    margin-bottom: 25px;
+}
+#Menu-drop-down li:last-child{
+    border-bottom: none;
+}
+.drop-item{
+    cursor: pointer;
+}
+.drop-item:hover{
+    background-color: var(--text-hover-color);
+}
+#logo-container{
+    width: 40%;
+    height: 100px;
+    border-bottom: none;
+    display: flex;
+    justify-content: flex-end;
+}
+#logo-container img{
+    height: 100px;
+}
+/* ================================ Main ================================== */
+main{
+    width: 100%;
+    height: auto;
+    padding-top: 15rem;
+    margin-bottom: 6rem;
+}
+/* ===================== Choosing part ==================== */
+.choosing-part-item{
+    width: 100%;
+    height: 500px;
+}
+#choosing-part-container{
+    height: 500px;
+}
+#choosing-part-text-container{
+    background-color: #000;
+    text-align: center;
+    padding: 5rem 0;
+    border: 5px solid hsl(240, 97%, 37%);
+    animation-name: borderAnime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+#choosing-part-text-container h1{
+    color: #000;
+    font-family: var(--sign);
+    font-size: 8rem;
+    position: absolute;
+    right: 10%;
+    animation-name: h-1-anime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+#choosing-part-text-container h2{
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: .1rem;
+    margin-bottom: 4rem;
+    animation-name: h-2-anime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}/*=======================================================================*/
+#orders-page{
+    width: 0;
+    height: 100vh;
+    padding-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    box-shadow: 30px 0 100px #fff;
+    transition: .5s;
+    position: fixed;
+    z-index: var(--fixed-z-index);
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+}
+.orders-page-close{
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: var(--header-font-size);
+    cursor: pointer;
+}
+.orders-page-close:hover{
+    color: var(--text-hover-color);
+}
+/* ========================== Get orders section ======================== */
+#first-order-item{
+    opacity: .2;
+}
+#second-order-item{
+    opacity: .2;
+}
+#third-order-item{
+    opacity: .2;
+}
+#get-orders{
+    width: 100%;
+    height: 404px;
+    margin-bottom: 2rem;
+}
+.get-orders-item{
+    width: 100%;
+    height: 33.33%;
+    background-color: #000;
+    border: 2px solid rgba(235, 85, 5, 0.8);
+    margin-bottom: .2rem;
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    position: relative;
+}
+.order-closing{
+    font-size: var(--header-font-size);
+    position: absolute;
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.order-closing:hover{
+    color: var(--text-hover-color);
+}
+#total-price-section{
+    height: 2rem;
+    padding: 1rem;
+    margin-left: .5rem;
+    font-size: var(--text-font-size);
+    margin-bottom: 2rem;
+}
+#calculate-button{
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+    border: 2px solid var(--neon-light);
+    color: #fff;
+    font-family: var(--header-font-family);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 3rem;
+}
+#calculate-button:hover{
+    background-color: rgb(33, 1, 27);
+    color: var(--text-hover-color);
+}
+#info-part-delivery-container input{
+    display: block;
+    padding: .3rem;
+    margin-bottom: 1rem;
+}
+input[type="submit"] {
+    display: initial;
+    background-color: #000;
+    border: 2px solid var(--neon-light);
+    color: #fff;
+    font-family: var(--header-font-family);
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+input[type="submit"]:hover{
+    background-color: rgb(33, 1, 27);
+    color: var(--text-hover-color);
+}
+/* ===================== Delivery part ==================== */
+#delivery-item-container{
+    width: 100%;
+    height: 600px;
+    background-color: transparent;
+}
+.delivery-item{
+    width: 100%;
+    height: 33.33%;
+    position: relative;
+    border: 1px solid #fff;
+}
+#special-break-fast{
+    background-color: rgba(235, 85, 5, 0.8);
+}
+#coffee-item{
+    background-color: rgba(122, 73, 0, 0.8);
+}
+#daily-cake{
+    background-color: rgba(255, 0, 0, 0.8);
+}
+.item-picture-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.picture-info{
+    text-align: center;
+    padding-top: 3.8rem;
+}
+.picture-info,
+.picture{
+    width: 50%;
+    height: 100%;
+}
+.picture img{
+    height: 100%;
+}
+.uil-shopping-cart-alt{
+    position: absolute;
+    top: 0;
+    right: .5rem;
+    font-size: 2.2rem;
+    cursor: pointer;
+
+}
+.uil-shopping-cart-alt:hover{
+    color: var(--text-hover-color);
+}
+#red-velvet-picture,
+#french-press-picture{
+    width: 100%;
+}
+/* =========================== Animations =========================== */
+@keyframes borderAnime {
+    0%
+    {
+        box-shadow: none;
+    }
+    100%
+    {
+        box-shadow: 0 0 25px hsl(240, 97%, 37%),
+        inset 0 0 25px hsl(240, 97%, 37%);
+    }
+}
+@keyframes h-1-anime {
+    0%
+    {
+        color: #000;
+        text-shadow: none;
+    }
+    50%
+    {
+        color: hsl(300, 100%, 20%);
+        text-shadow: none;
+    }
+    75%
+    {
+        color: #000;
+        text-shadow: none;
+    }
+    100%
+    {
+        color: hsl(300, 100%, 20%);
+        text-shadow: 0 0 60px hsl(300, 100%, 12%),
+        -10px 0 60px hsl(300, 100%, 12%),
+         0 -10px 60px hsl(300, 100%, 12%);
+    }
+}
+@keyframes h-2-anime {
+    0%
+    {
+        color: #000;
+        text-shadow: none;
+    }
+    50%
+    {
+        color: hsl(36, 100%, 50%);
+        text-shadow: none;
+    }
+    75%
+    {
+        color: #000;
+        text-shadow: none;
+    }
+    100%
+    {
+        color: hsl(36, 100%, 50%);
+        text-shadow: 0 0 60px hsl(36, 100%, 35%),
+        -10px 0 60px hsl(36, 100%, 35%),
+        0 -10px 60px hsl(36, 100%, 35%);
+    }
+}
+/* ============================= Footer =========================== */
+/* =================== History Part ==================== */
+#history-part{
+    position: relative;
+    background-color: rgba(20, 20, 20, 0.8);
+    height: 700px;
+}
+#history-sign{
+    display: block;
+    font-family: var(--sign);
+    font-size: var(--neon-lump-font-family);
+}
+#history-text{
+    text-align: center;
+}
+#history-text h1{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#history-text > *{
+    margin-bottom: 2rem;
+}
+#history-picture img{
+    width: 100%;
+    height: 350px;
+}
+.history-item{
+    width: 100%;
+    height: 350px;
+}
+#history-part::after{
+    content: '';
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background-image: url(../../figma/fundation.svg);
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ========================= Contacts Part ======================== */
+#contacts-part{
+    height: auto;
+    margin-bottom: 2rem;
+}
+#contacts-container{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    height: auto;
+}
+.contacts-item{
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+    font-weight: var(--bold);
+    width: 100%;
+    height: 100px;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.contacts-item:last-child{
+    justify-content: space-around;
+    border-bottom: none;
+}
+.contacts-item i{
+    font-size: 2rem;
+}
+.contacts-item img{
+    width: 50px;
+    height: 50px;
+}
+.github:hover{
+    color: hsl(285, 100%, 31%);
+}
+.whatsapp:hover{
+    color: hsl(120, 100%, 50%);
+}
+.linkedin:hover{
+    color: hsl(210, 100%, 40%);
+}
+#E-mail{
+    width: 100%;   
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+#copyright{
+    text-align: center;
+}
+/*======================== Media Queries =============================*/
+@media screen and (min-width: 600px) {
+    #contacts-part{
+        padding: 0 5rem;
+    }
+    .contacts-item{
+        float: left;
+        width: 33.33%;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .contacts-item:last-child{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .contacts-item:first-child{
+        border-left: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    #red-velvet-picture,
+    #french-press-picture{
+        width: 46%;
+    }
+    .history-item{
+        float: left;
+        width: 50%;
+    }
+    #history-part{
+        height: 400px;
+    }
+    #history-text{
+        text-align: left;
+        padding-left: 2rem;
+    }
+    #history-picture img{
+        height: 400px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #menu-container,
+    .drop-menu
+    {
+        width: 100%;
+    }
+    #menu-container{
+        order: 2;
+    }
+    #logo-container{
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        order: 1;
+        justify-content: center;
+    }
+    nav{
+        flex-direction: column;
+    }
+    #choosing-part-text-container h1{
+        font-size: 4rem;
+    }
+}
+@media screen and (min-width: 1840px) {
+    header, 
+    nav, 
+    .menu,
+    #logo-container,
+    #logo-container img
+    {
+        height: 200px;
+    }
+    .contacts-item{
+        height: 200px;
+    }
+    .contacts-item img{
+        width: 120px;
+        height: 120px;
+    }
+    .contacts-item i{
+        font-size: 4rem;
+    }
+    #delivery-item-container{
+        height: 1000px;
+    }
+    #get-orders{
+        height: 1004px;
+    }
+    #history-part{
+        height: 600px;
+    }
+    #history-picture img{
+        height: 600px;
+    }
+    #history-part::after{
+        width: 200px;
+        height: 200px;
+    }
+}
