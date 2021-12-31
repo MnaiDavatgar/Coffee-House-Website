@@ -107,6 +107,12 @@ li{
 footer{
     margin-top: 4rem;
 }
+::-webkit-scrollbar{
+    width: .2rem;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(87, 86, 86);
+}
 /* ====================== Reusable Classes ====================== */
 .section{
     margin-bottom: var(--m-b-1-5);

@@ -143,6 +143,12 @@ li{
     font-weight: var(--bold);
     font-size: var(--menu-font-size);
 }
+::-webkit-scrollbar{
+    width: .2rem;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(87, 86, 86);
+}
 /* ===================== Navigation Bar ==================== */
 header{
     width: 100%;
